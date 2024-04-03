@@ -1,0 +1,97 @@
+body {
+    #margin: 0;
+    font-family: Tahoma, Roboto, Arial, sans-serif;
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #justify-content: center;
+    height: 100vh;
+}
+
+.day {
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #ddeeff;
+    position: relative;
+    border: 2px solid #aaeeff;
+	display: flex;
+    flex-direction: column;
+}
+
+.day.highlight {
+	background-color: #ddffdd;
+}
+
+.task-box {
+	background-color: transparent;
+	width: 100%;
+	box-sizing: border-box;
+	flex-direction: row;
+	position: relative;
+}
+
+.task {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: calc(100% - 40px);
+	box-sizing: border-box;
+    padding: 20px;
+	border-radius: 10px;
+	background-color: #eeeedd;
+	border: 2px solid #ffddaa;
+	position: relative;
+    z-index: 3000;
+}
+
+.title {
+    position: absolute;
+    top: -10px;
+    background-color: #f4fcff;
+    z-index: 10;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #aaeeff;
+}
+
+body:not(.dragging) .drop-target {
+    pointer-events: none;
+}
+
+.drop-target {
+	width: 100%;
+    background-color: transparent;
+    z-index: 4000;
+}
+
+/*
+.drop-target.highlight::before {
+    content: "-->";
+}
+*/
+
+.drop-target.day-top {
+	height: 20px;
+}
+
+.drop-target.day-bottom {
+	height: 20px;
+}
+
+.drop-target.task-top {
+	position: absolute;
+	top: 0;
+	height: calc(50%);
+}
+
+.drop-target.task-bottom {
+	position: absolute;
+	bottom: 0;
+	height: calc(50%);
+}
