@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync --progress --human-readable --stats --compress --recursive qasmiq/* tasmine_install@droplet:/srv/http/qasmiq/
