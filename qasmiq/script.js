@@ -102,10 +102,11 @@ async function init() {
         if (/*window.location.hostname === 'localhost' || */urlParams.get('sample') != null) {
             rebuildSample();
         } else {
-            await initDatabase();
-            await login();
-            const rows = await loadFromDatabase();
-            rebuild(rows);
+            //await initDatabase();
+            //await login();
+            //const rows = await loadFromDatabase();
+            //rebuild(rows);
+            rebuildSample();
         }
     }
     catch (error) {
